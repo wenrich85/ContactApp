@@ -1,4 +1,4 @@
-package com.example.contactapp.ui.theme.viewmodel
+package com.example.contactapp.ui.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

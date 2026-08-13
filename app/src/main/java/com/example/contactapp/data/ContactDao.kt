@@ -6,12 +6,11 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.StateFlow
 
 @Dao
 interface ContactDao {
     @Query("Select * From contacts ORDER BY name ASC")
-    fun getAllContacts(): StateFlow<List<Contact>>
+    fun getAllContacts(): Flow<List<Contact>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertContact(contact: Contact)
